@@ -1,9 +1,9 @@
 # --- Identity ---
-id: "d68933b7-41c4-433f-b449-a088d0ecc593"
+id: "ebbd7614-da67-4cf5-8166-c7dc4400dbc6"
 name: "practice-question-generator"
 display_name: "Practice Question Generator"
 description: "Task prompt for generating exam-style practice questions"
-version: "1.0.0"
+version: "1.0.1"
 engine: ">=0.1.0"
 author:
   name: "skrptiq"
