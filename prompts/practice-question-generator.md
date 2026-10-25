@@ -4,6 +4,11 @@ id: practice-question-generator
 title: Practice Question Generator
 description: "Task prompt for generating exam-style practice questions"
 tags: [Tested, Learning, Planning]
+context_params:
+  source:
+    label: "Structured notes"
+    description: "The revision material the questions are generated from. Supplied by the invoking workflow."
+    required: true
 inputs:
   question_count:
     label: "Question Count"
@@ -37,8 +42,7 @@ Generates practice questions that mirror exam formats for effective revision.
 
 ## Prompt
 
-Generate {{input.question_count}} practice questions in the style of {{input.exam_type}}, based on the structured notes and flashcards below. The module is {{input.module_name}} and the topic is {{input.topic}}. Include a mix of question types: multiple choice, short answer, and essay questions. For each question, provide a model answer and mark scheme. Ensure questions test different levels of understanding: recall, comprehension, application, and analysis.
+Generate {{input.question_count}} practice questions in the style of {{input.exam_type}}, based on the structured notes below. The module is {{input.module_name}} and the topic is {{input.topic}}. Include a mix of question types: multiple choice, short answer, and essay questions. For each question, provide a model answer and mark scheme. Ensure questions test different levels of understanding: recall, comprehension, application, and analysis.
 
-**Structured notes:** {{steps.previous.output}}
+**Structured notes:** {{step.context.source}}
 
-**Flashcards:** {{steps.Flashcard Creator.output}}
